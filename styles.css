@@ -1362,6 +1362,16 @@ h3 {
   color: var(--white);
 }
 
+.business-section h2 {
+  max-width: 560px;
+  font-size: clamp(2.45rem, 3.5vw, 3.55rem);
+  line-height: 1.15;
+}
+
+.business-section h2 span {
+  white-space: nowrap;
+}
+
 .business-section p {
   max-width: 650px;
   color: #dff5e8;
@@ -1805,6 +1815,15 @@ h3 {
   .flow {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .business-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .business-pink-mascot {
+    justify-self: end;
+    width: min(190px, 38vw);
+  }
 }
 
 @media (max-width: 920px) {
@@ -1960,6 +1979,15 @@ h3 {
 
   h2 {
     font-size: 1.92rem;
+  }
+
+  .business-section h2 {
+    font-size: 2.08rem;
+    line-height: 1.22;
+  }
+
+  .business-section h2 span {
+    white-space: normal;
   }
 
   .events-hero {
