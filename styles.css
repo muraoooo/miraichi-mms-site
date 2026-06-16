@@ -715,6 +715,20 @@ h3 {
   position: relative;
 }
 
+.section-heading:has(.section-pink-badge) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 240px);
+  align-items: center;
+  gap: clamp(22px, 5vw, 72px);
+  max-width: 1120px;
+}
+
+.section-heading:has(.section-pink-badge) .section-kicker,
+.section-heading:has(.section-pink-badge) h2,
+.section-heading:has(.section-pink-badge) p {
+  grid-column: 1;
+}
+
 .section-heading.compact {
   max-width: 780px;
 }
@@ -792,11 +806,12 @@ h3 {
 }
 
 .section-pink-badge {
-  position: absolute;
-  top: -32px;
-  right: -26px;
-  width: 240px;
-  transform: rotate(-8deg);
+  position: static;
+  grid-column: 2;
+  grid-row: 1 / 4;
+  justify-self: center;
+  width: min(240px, 100%);
+  transform: rotate(-5deg);
   filter: drop-shadow(0 16px 26px rgba(244, 74, 142, 0.16));
 }
 
@@ -1241,7 +1256,9 @@ h3 {
 .mascot-panel {
   position: relative;
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-items: center;
+  align-items: end;
   gap: 18px;
   border-radius: 8px;
   background:
@@ -1253,16 +1270,14 @@ h3 {
 }
 
 .mascot-panel img {
-  width: min(132px, 42vw);
+  width: min(160px, 100%);
   height: auto;
 }
 
 .mascot-panel-pink {
-  position: absolute;
-  top: 2px;
-  right: -6px;
-  width: 170px;
-  transform: rotate(10deg);
+  position: static;
+  width: min(170px, 100%);
+  transform: rotate(4deg);
 }
 
 .mascot-panel-pink img {
@@ -1271,6 +1286,7 @@ h3 {
 }
 
 .mascot-panel p {
+  grid-column: 1 / -1;
   margin: 0;
   color: var(--green-950);
   font-weight: 900;
@@ -1336,10 +1352,9 @@ h3 {
 
 .business-grid {
   display: grid;
-  grid-template-columns: 1fr minmax(280px, 0.65fr);
-  gap: clamp(28px, 6vw, 76px);
-  align-items: start;
-  position: relative;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.62fr) minmax(170px, 220px);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
 }
 
 .business-section h2,
@@ -1372,10 +1387,9 @@ h3 {
 }
 
 .business-pink-mascot {
-  position: absolute;
-  right: -8px;
-  bottom: -18px;
-  width: 230px;
+  position: static;
+  justify-self: center;
+  width: min(220px, 100%);
   filter: drop-shadow(0 18px 30px rgba(244, 74, 142, 0.18));
 }
 
@@ -1522,10 +1536,9 @@ h3 {
 
 .contact-inner {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 210px);
   gap: 24px;
   align-items: center;
-  position: relative;
 }
 
 .contact h2,
@@ -1541,16 +1554,19 @@ h3 {
 }
 
 .contact-pink-mascot {
-  position: absolute;
-  top: -22px;
-  right: 18px;
-  width: 220px;
+  position: static;
+  justify-self: center;
+  width: min(210px, 100%);
   filter: drop-shadow(0 18px 28px rgba(244, 74, 142, 0.16));
 }
 
 .contact-pink-mascot img {
   width: 100%;
   height: auto;
+}
+
+.contact .hero-actions {
+  grid-column: 1 / -1;
 }
 
 .site-footer {
