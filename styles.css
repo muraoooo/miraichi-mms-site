@@ -468,15 +468,14 @@ h3 {
 
 .hero-links-panel {
   position: absolute;
-  top: 38%;
+  top: 132px;
   left: 0;
   z-index: 3;
   display: grid;
   gap: 8px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   width: min(380px, 52vw);
-  transform: translateY(-50%);
-  animation: linkPanelFloat 7s ease-in-out infinite;
+  animation: none;
 }
 
 .hero-links-panel p {
@@ -526,12 +525,12 @@ h3 {
 
 .hero-mascot {
   position: absolute;
-  right: -2%;
-  bottom: 28px;
+  right: -4%;
+  bottom: 18px;
   z-index: 1;
-  width: min(25vw, 350px);
-  max-width: 350px;
-  min-width: 290px;
+  width: min(24vw, 340px);
+  max-width: 340px;
+  min-width: 280px;
   pointer-events: none;
   transform: perspective(900px) rotateY(-8deg) rotateZ(1deg);
   animation: mascotFloat 6s ease-in-out infinite;
@@ -544,12 +543,12 @@ h3 {
 
 .hero-mascot-pink {
   position: absolute;
-  right: 12%;
-  bottom: 46px;
+  right: 30%;
+  bottom: 24px;
   z-index: 2;
-  width: min(25vw, 350px);
-  max-width: 350px;
-  min-width: 290px;
+  width: min(24vw, 340px);
+  max-width: 340px;
+  min-width: 280px;
   pointer-events: none;
   transform: perspective(900px) rotateY(8deg) rotateZ(-3deg);
   filter: drop-shadow(0 22px 36px rgba(244, 74, 142, 0.2));
@@ -563,7 +562,7 @@ h3 {
 
 .mascot-shadow {
   position: absolute;
-  right: 2%;
+  right: -1%;
   bottom: 18px;
   z-index: 0;
   width: min(44vw, 540px);
@@ -794,9 +793,9 @@ h3 {
 
 .section-pink-badge {
   position: absolute;
-  top: -6px;
-  right: -4px;
-  width: 94px;
+  top: -32px;
+  right: -26px;
+  width: 240px;
   transform: rotate(-8deg);
   filter: drop-shadow(0 16px 26px rgba(244, 74, 142, 0.16));
 }
@@ -1260,9 +1259,9 @@ h3 {
 
 .mascot-panel-pink {
   position: absolute;
-  top: 16px;
-  right: 12px;
-  width: 68px;
+  top: 2px;
+  right: -6px;
+  width: 170px;
   transform: rotate(10deg);
 }
 
@@ -1376,7 +1375,7 @@ h3 {
   position: absolute;
   right: -8px;
   bottom: -18px;
-  width: 112px;
+  width: 230px;
   filter: drop-shadow(0 18px 30px rgba(244, 74, 142, 0.18));
 }
 
@@ -1545,7 +1544,7 @@ h3 {
   position: absolute;
   top: -22px;
   right: 18px;
-  width: 94px;
+  width: 220px;
   filter: drop-shadow(0 18px 28px rgba(244, 74, 142, 0.16));
 }
 
