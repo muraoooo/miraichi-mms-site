@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="MIRAICHI・MMSは、生成AIを学び、試し、作り、発信し、仕事に変えるためのAI実践コミュニティです。個人の学習継続から法人のAI導入支援まで伴走します。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:site_name" content="MIRAICHI・MMS" />
+    <meta property="og:title" content="MIRAICHI・MMS | AIで動ける人を育てる実践コミュニティ" />
+    <meta
+      property="og:description"
+      content="学ぶ、試す、作る、発信する、仕事にする。生成AIを自分の力に変えるAI実践コミュニティです。"
+    />
+    <!-- TODO: 公開ドメイン確定後、og:imageを https://.../assets/og-miraichi-mms.png の絶対URLへ差し替える -->
+    <meta property="og:image" content="assets/og-miraichi-mms.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="/" />
+    <title>MIRAICHI・MMS | AIで動ける人を育てる実践コミュニティ</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&display=swap&text=%2B0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%E3%80%81%E3%80%82%E3%81%82%E3%81%84%E3%81%88%E3%81%8B%E3%81%8C%E3%81%8D%E3%81%8F%E3%81%91%E3%81%92%E3%81%93%E3%81%95%E3%81%97%E3%81%98%E3%81%99%E3%81%9A%E3%81%9B%E3%81%9F%E3%81%A0%E3%81%A3%E3%81%A5%E3%81%A6%E3%81%A7%E3%81%A8%E3%81%A9%E3%81%AA%E3%81%AB%E3%81%AE%E3%81%AF%E3%81%B6%E3%81%B8%E3%81%BE%E3%81%BF%E3%82%80%E3%82%81%E3%82%82%E3%82%89%E3%82%8A%E3%82%8B%E3%82%8C%E3%82%8F%E3%82%92%E3%82%93%E3%82%A2%E3%82%A3%E3%82%A4%E3%82%A6%E3%82%AA%E3%82%AB%E3%82%B0%E3%82%B3%E3%82%B5%E3%82%B7%E3%82%B8%E3%82%B9%E3%82%BA%E3%82%BB%E3%83%81%E3%83%83%E3%83%84%E3%83%86%E3%83%88%E3%83%89%E3%83%8A%E3%83%8B%E3%83%8F%E3%83%90%E3%83%93%E3%83%96%E3%83%97%E3%83%9C%E3%83%9D%E3%83%9F%E3%83%A0%E3%83%A5%E3%83%A9%E3%83%AA%E3%83%AB%E3%83%AD%E3%83%B3%E3%83%BB%E3%83%BC%E4%B8%80%E4%B8%8A%E4%BA%8B%E4%BA%BA%E4%BB%95%E4%BB%A5%E4%BB%B6%E4%BC%9A%E4%BD%9C%E4%BD%BF%E4%BF%A1%E4%BF%AE%E5%81%B4%E5%85%A5%E5%85%B7%E5%87%BA%E5%88%86%E5%88%9D%E5%89%8D%E5%8A%9B%E5%8A%A0%E5%8B%89%E5%8B%95%E5%8B%99%E5%8C%96%E5%8F%82%E5%8F%96%E5%90%91%E5%95%86%E5%96%B6%E5%9F%BA%E5%A0%B4%E5%A3%87%E5%A4%89%E5%AD%A6%E5%AE%9A%E5%AE%9F%E5%B0%8E%E5%B0%8F%E5%BA%83%E5%BA%A7%E5%BC%95%E5%BC%B7%E5%BF%83%E6%85%A3%E6%88%90%E6%88%A6%E6%89%8B%E6%8C%91%E6%8F%B4%E6%94%AF%E6%95%B4%E6%96%B9%E6%97%A5%E6%9C%9D%E6%9C%AC%E6%A1%88%E6%A5%AD%E6%AD%A9%E6%AF%8E%E6%B3%95%E6%B4%BB%E6%B8%9B%E7%89%B9%E7%8F%BE%E7%90%86%E7%99%BA%E7%99%BB%E7%9B%B8%E7%9F%A5%E7%A0%94%E7%B5%82%E7%B5%84%E7%B5%A1%E7%B6%9A%E7%B7%9A%E7%BF%92%E8%80%85%E8%81%9E%E8%87%AA%E8%A1%A8%E8%A8%98%E8%A9%A6%E8%AA%B2%E8%AB%87%E8%AC%9B%E8%AD%98%E8%B7%B5%E9%80%9A%E9%80%A3%E9%81%8B%E9%81%93%E9%81%B8%E9%95%B7%E9%96%93%E9%A1%8C%EF%BC%9F"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&display=swap&text=%2B0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%E3%80%81%E3%80%82%E3%81%82%E3%81%84%E3%81%88%E3%81%8B%E3%81%8C%E3%81%8D%E3%81%8F%E3%81%91%E3%81%92%E3%81%93%E3%81%95%E3%81%97%E3%81%98%E3%81%99%E3%81%9A%E3%81%9B%E3%81%9F%E3%81%A0%E3%81%A3%E3%81%A5%E3%81%A6%E3%81%A7%E3%81%A8%E3%81%A9%E3%81%AA%E3%81%AB%E3%81%AE%E3%81%AF%E3%81%B6%E3%81%B8%E3%81%BE%E3%81%BF%E3%82%80%E3%82%81%E3%82%82%E3%82%89%E3%82%8A%E3%82%8B%E3%82%8C%E3%82%8F%E3%82%92%E3%82%93%E3%82%A2%E3%82%A3%E3%82%A4%E3%82%A6%E3%82%AA%E3%82%AB%E3%82%B0%E3%82%B3%E3%82%B5%E3%82%B7%E3%82%B8%E3%82%B9%E3%82%BA%E3%82%BB%E3%83%81%E3%83%83%E3%83%84%E3%83%86%E3%83%88%E3%83%89%E3%83%8A%E3%83%8B%E3%83%8F%E3%83%90%E3%83%93%E3%83%96%E3%83%97%E3%83%9C%E3%83%9D%E3%83%9F%E3%83%A0%E3%83%A5%E3%83%A9%E3%83%AA%E3%83%AB%E3%83%AD%E3%83%B3%E3%83%BB%E3%83%BC%E4%B8%80%E4%B8%8A%E4%BA%8B%E4%BA%BA%E4%BB%95%E4%BB%A5%E4%BB%B6%E4%BC%9A%E4%BD%9C%E4%BD%BF%E4%BF%A1%E4%BF%AE%E5%81%B4%E5%85%A5%E5%85%B7%E5%87%BA%E5%88%86%E5%88%9D%E5%89%8D%E5%8A%9B%E5%8A%A0%E5%8B%89%E5%8B%95%E5%8B%99%E5%8C%96%E5%8F%82%E5%8F%96%E5%90%91%E5%95%86%E5%96%B6%E5%9F%BA%E5%A0%B4%E5%A3%87%E5%A4%89%E5%AD%A6%E5%AE%9A%E5%AE%9F%E5%B0%8E%E5%B0%8F%E5%BA%83%E5%BA%A7%E5%BC%95%E5%BC%B7%E5%BF%83%E6%85%A3%E6%88%90%E6%88%A6%E6%89%8B%E6%8C%91%E6%8F%B4%E6%94%AF%E6%95%B4%E6%96%B9%E6%97%A5%E6%9C%9D%E6%9C%AC%E6%A1%88%E6%A5%AD%E6%AD%A9%E6%AF%8E%E6%B3%95%E6%B4%BB%E6%B8%9B%E7%89%B9%E7%8F%BE%E7%90%86%E7%99%BA%E7%99%BB%E7%9B%B8%E7%9F%A5%E7%A0%94%E7%B5%82%E7%B5%84%E7%B5%A1%E7%B6%9A%E7%B7%9A%E7%BF%92%E8%80%85%E8%81%9E%E8%87%AA%E8%A1%A8%E8%A8%98%E8%A9%A6%E8%AA%B2%E8%AB%87%E8%AC%9B%E8%AD%98%E8%B7%B5%E9%80%9A%E9%80%A3%E9%81%8B%E9%81%93%E9%81%B8%E9%95%B7%E9%96%93%E9%A1%8C%EF%BC%9F"
+        rel="stylesheet"
+      />
+    </noscript>
+    <link
+      rel="preload"
+      as="image"
+      href="assets/miraichi-3d-main-360.webp"
+      imagesrcset="assets/miraichi-3d-main-360.webp 360w, assets/miraichi-3d-main-640.webp 640w, assets/miraichi-3d-main-840.webp 840w"
+      imagesizes="(max-width: 768px) 176px, (max-width: 1312px) 32vw, 420px"
+      type="image/webp"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="MIRAICHI・MMS トップへ">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <path d="M9 23.5 24 11l15 12.5" />
+          <path d="M14 21.5v15h20v-15" />
+          <path d="M20 36.5V28h8v8.5" />
+          <path class="brand-spark" d="M35.5 12.5v7M32 16h7M12.5 31.5h5M30.5 31.5h5" />
+        </svg>
+        <span>
+          <strong>MIRAICHI・MMS</strong>
+          <small>AI Practice Community</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" data-menu-toggle>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" data-nav>
+        <a href="#about">全体像</a>
+        <a href="#programs">活動</a>
+        <a href="events.html">イベント</a>
+        <a href="#mms">MMS</a>
+        <a href="#business">法人の方へ</a>
+        <a href="#contact">相談する</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-bg" aria-hidden="true">
+          <span class="mesh-blob mesh-blob-green"></span>
+          <span class="mesh-blob mesh-blob-gold"></span>
+          <span class="mesh-blob mesh-blob-pink"></span>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">AIを学ぶ場所から、AIで未来の仕事を作る場所へ。</p>
+          <h1 id="hero-title">AIで、<span>動ける自分に</span><span>なる。</span></h1>
+          <picture class="mobile-hero-mascot">
+            <source
+              srcset="
+                assets/miraichi-3d-main-360.webp 360w,
+                assets/miraichi-3d-main-640.webp 640w,
+                assets/miraichi-3d-main-840.webp 840w
+              "
+              sizes="140px"
+              type="image/webp"
+            />
+            <img
+              src="assets/miraichi-3d-main-360.png"
+              srcset="
+                assets/miraichi-3d-main-360.png 360w,
+                assets/miraichi-3d-main-640.png 640w,
+                assets/miraichi-3d-main-840.png 840w
+              "
+              sizes="140px"
+              alt="MIRAICHIマスコット"
+              width="360"
+              height="360"
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
+          <div class="hero-mobile-accent" aria-label="MIRAICHIロゴとMMSマスコット">
+            <div class="hero-mobile-logo">
+              <picture>
+                <source srcset="assets/_unused/miraichi-logo.webp" type="image/webp" />
+                <img
+                  src="assets/_unused/miraichi-logo.png"
+                  alt="MIRAICHIロゴ"
+                  width="128"
+                  height="118"
+                  loading="eager"
+                  decoding="async"
+                />
+              </picture>
+              <strong>MIRAICHI・MMS</strong>
+            </div>
+            <img
+              class="hero-mobile-pink"
+              src="assets/miraichi-3d-pink-180.png"
+              alt="MMSマスコット"
+              width="180"
+              height="180"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <p class="lead">
+            学ぶ、試す、作る、発信する、仕事にする。<span class="no-break">MIRAICHI・MMSは、</span><span class="mobile-line">生成AIを自分の力に変える</span>
+            <span class="mobile-line">実践型AIコミュニティです。</span>
+          </p>
+
+          <div class="hero-actions" aria-label="主要アクション">
+            <a class="button primary" href="https://miraichi.memberpay.jp/plan/item/li54pja" target="_blank" rel="noopener">MMSに参加する</a>
+            <a class="button secondary" href="https://peatix.com/group/16331864/events" target="_blank" rel="noopener">次回の公開イベントを見る</a>
+          </div>
+
+          <div class="hero-proof-strip" aria-label="公開実績">
+            <span>年間セミナー 200+</span>
+            <span>延べ学習機会 5万人+</span>
+            <span>Peatix過去イベント 226件</span>
+            <span>noteアーカイブ 178本</span>
+          </div>
+
+          <div class="mobile-hero-links" aria-label="MIRAICHIの外部リンク">
+            <a href="https://miraichi.memberpay.jp/plan/item/li54pja" target="_blank" rel="noopener">MMS参加申込</a>
+            <a href="https://peatix.com/group/16331864/events" target="_blank" rel="noopener">Peatix</a>
+            <a href="events.html">開催実績</a>
+            <a href="https://note.com/miraichi_ai" target="_blank" rel="noopener">note</a>
+            <a href="https://x.com/mirai_spark" target="_blank" rel="noopener">X</a>
+          </div>
+
+          <dl class="hero-stats" aria-label="MIRAICHIの実績">
+            <div>
+              <dt>200+</dt>
+              <dd>年間セミナー開催</dd>
+            </div>
+            <div>
+              <dt>5万人+</dt>
+              <dd>延べ5万人が学んだ</dd>
+            </div>
+            <div>
+              <dt>178本</dt>
+              <dd>note掲載アーカイブ</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-visual" aria-label="MIRAICHIマスコット">
+          <div class="hero-brand-badge" aria-label="MIRAICHIロゴ">
+            <picture>
+              <source srcset="assets/_unused/miraichi-logo.webp" type="image/webp" />
+              <img
+                src="assets/_unused/miraichi-logo.png"
+                alt="MIRAICHIロゴ"
+                width="128"
+                height="118"
+                loading="eager"
+                decoding="async"
+              />
+            </picture>
+            <strong>MIRAICHI・MMS</strong>
+          </div>
+          <div class="hero-links-panel" aria-label="MIRAICHIのリンク">
+            <p>Links</p>
+            <a href="https://miraichi.memberpay.jp/plan/item/li54pja" target="_blank" rel="noopener">
+              <strong>MMS参加申込</strong>
+              <span>MemberPay</span>
+            </a>
+            <a href="https://peatix.com/group/16331864/events" target="_blank" rel="noopener">
+              <strong>Peatix</strong>
+              <span>最新・全イベント</span>
+            </a>
+            <a href="events.html">
+              <strong>開催実績</strong>
+              <span>過去イベントを見る</span>
+            </a>
+            <a href="https://note.com/miraichi_ai" target="_blank" rel="noopener">
+              <strong>note</strong>
+              <span>記事・開催レポート</span>
+            </a>
+            <a href="https://x.com/mirai_spark" target="_blank" rel="noopener">
+              <strong>今野純子さん X</strong>
+              <span>@mirai_spark</span>
+            </a>
+            <a href="https://x.com/LxGtUGtlRSh8yXW" target="_blank" rel="noopener">
+              <strong>村岡大地さん X</strong>
+              <span>@LxGtUGtlRSh8yXW</span>
+            </a>
+          </div>
+          <span class="mascot-shadow" aria-hidden="true"></span>
+          <picture class="hero-mascot-pink">
+            <img
+              src="assets/miraichi-3d-pink-180.png"
+              srcset="
+                assets/miraichi-3d-pink-180.png 180w,
+                assets/miraichi-3d-pink-320.png 320w
+              "
+              sizes="(max-width: 1312px) 12vw, 180px"
+              alt="MMSマスコット"
+              width="180"
+              height="180"
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
+          <picture class="hero-mascot">
+            <source
+              srcset="
+                assets/miraichi-3d-main-360.webp 360w,
+                assets/miraichi-3d-main-640.webp 640w,
+                assets/miraichi-3d-main-840.webp 840w
+              "
+              sizes="(max-width: 1312px) 32vw, 420px"
+              type="image/webp"
+            />
+            <img
+              src="assets/miraichi-3d-main-640.png"
+              srcset="
+                assets/miraichi-3d-main-360.png 360w,
+                assets/miraichi-3d-main-640.png 640w,
+                assets/miraichi-3d-main-840.png 840w
+              "
+              sizes="(max-width: 1312px) 32vw, 420px"
+              alt="MIRAICHIマスコット"
+              width="640"
+              height="640"
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
+        </div>
+      </section>
+
+      <section class="intro band" id="about" aria-labelledby="about-title">
+        <div class="section-inner intro-grid">
+          <div>
+            <p class="section-kicker">Concept</p>
+            <h2 id="about-title">知識で終わらせず、現場で使える力に変える。</h2>
+          </div>
+          <p>
+            MIRAICHIは、AIスクール、オンラインコミュニティ、法人向けAI導入支援、
+            実践型プロジェクトチームの中間にあるAI実践プラットフォームです。
+            画面を見ながら真似して作り、翌日の仕事に持ち帰れるところまで設計します。
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="programs" aria-labelledby="programs-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">Programs</p>
+            <h2 id="programs-title">学ぶ、試す、作る、発信する。</h2>
+            <p>
+              最新AIの情報収集で止まらないように、今日やること、今週作るもの、
+              仕事で使う場面まで分解します。
+            </p>
+          </div>
+
+          <div class="tool-strip" aria-label="MIRAICHIで扱うAIツールやテーマ">
+            <span>ChatGPT</span>
+            <span>Claude</span>
+            <span>Gemini</span>
+            <span>Dify</span>
+            <span>GAS</span>
+            <span>Canva</span>
+            <span>画像生成</span>
+            <span>動画生成</span>
+            <span>AIエージェント</span>
+            <span>業務効率化</span>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card">
+              <span class="service-icon">01</span>
+              <h3>AIセミナー</h3>
+              <p>ChatGPT、Claude、Gemini、Dify、GAS、Canva、生成AIツールを実務目線で学びます。</p>
+            </article>
+            <article class="service-card">
+              <span class="service-icon">02</span>
+              <h3>ハンズオン勉強会</h3>
+              <p>LINE通知、フォーム自動処理、チャットボット、YouTube要約などをその場で作ります。</p>
+            </article>
+            <article class="service-card">
+              <span class="service-icon">03</span>
+              <h3>コミュニティ学習</h3>
+              <p>朝活、アーカイブ、掲示板、バッジ、成長ボードで、ひとりで迷わず続けられます。</p>
+            </article>
+            <article class="service-card accent">
+              <span class="service-icon">04</span>
+              <h3>発信・登壇</h3>
+              <p>学んだ人が次は伝える側へ。アウトプットと発表の機会を通じて力を育てます。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section mms-section" id="mms" aria-labelledby="mms-title">
+        <div class="section-inner mms-grid">
+          <div class="mascot-panel">
+            <picture>
+              <source srcset="assets/miraichi-3d-main-360.webp" type="image/webp" />
+              <img
+                src="assets/miraichi-3d-main-360.png"
+                alt="MIRAICHIマスコット"
+                width="360"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <p>MMSは、学びを挑戦に変える発射台。</p>
+          </div>
+
+          <div>
+            <p class="section-kicker">MIRAICHI Moon Shot</p>
+            <h2 id="mms-title">MMSは、学んだAIを自分の仕事へ変える実践プログラム。</h2>
+            <div class="reason-list">
+              <article>
+                <h3>毎朝の小さな実践</h3>
+                <p>AIニュース、ゼロ秒思考、タイピング、瞑想、小さなアウトプットを習慣にします。</p>
+              </article>
+              <article>
+                <h3>178本のアーカイブ</h3>
+                <p>最新GPT活用、業務改善、制作、発信まで、必要な学びをあとから何度でも追えます。</p>
+              </article>
+              <article>
+                <h3>案件化・サービス化への導線</h3>
+                <p>資料作成、GAS自動化、LINEボット、AI研修、導入支援など仕事化しやすいテーマを扱います。</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section proof-section" aria-labelledby="proof-title">
+        <div class="section-inner">
+          <div class="section-heading compact with-badge">
+            <div>
+              <p class="section-kicker">Proof</p>
+              <h2 id="proof-title">聞いて終わりではなく、作って前に出る。</h2>
+            </div>
+            <picture>
+              <source srcset="assets/miraichi-3d-pink-180.webp" type="image/webp" />
+              <img
+                src="assets/miraichi-3d-pink-180.png"
+                alt="MIRAICHIマスコット"
+                width="180"
+                height="180"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </div>
+
+          <div class="voice-grid">
+            <article>
+              <span>MMS Member</span>
+              <h3>AI朝活で、毎日アウトプットする習慣ができた。</h3>
+              <p>Kさん / 会社員。ニュース整理と資料たたき台作成をAIで回せるように。</p>
+            </article>
+            <article>
+              <span>Hands-on</span>
+              <h3>GASとLINE通知を作り、業務連絡の手間を減らせた。</h3>
+              <p>Sさん / 個人事業主。フォーム処理と通知の自動化を持ち帰り、実務に反映。</p>
+            </article>
+            <article>
+              <span>Creator</span>
+              <h3>学ぶ側から、発表する側へ挑戦できた。</h3>
+              <p>Yさん / 講師志望。生成AI活用の発表を通じて、自分のサービス化を検討中。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section business-section" id="business" aria-labelledby="business-title">
+        <div class="section-inner business-grid">
+          <div>
+            <p class="section-kicker">AI Implementation</p>
+            <h2 id="business-title">法人向けAI導入支援は、現場の課題整理から。</h2>
+            <p>
+              ChatGPTを導入したのに使われない、ルールがない、何に使えばいいかわからない。
+              MIRAICHIはツール紹介だけでなく、実際の業務フローに合わせてAI活用を設計します。
+            </p>
+            <div class="hero-actions" aria-label="法人向け導線">
+              <a class="button primary" href="events.html">開催実績を見る</a>
+              <a class="button secondary" href="https://note.com/miraichi_ai" target="_blank" rel="noopener">活動報告を読む</a>
+            </div>
+          </div>
+          <ul class="business-list">
+            <li>社内AI研修・ハンズオン</li>
+            <li>業務改善テーマの洗い出し</li>
+            <li>AI活用フローと運用ルール設計</li>
+            <li>GAS、フォーム、LINE通知、自動化支援</li>
+            <li>社内AI担当者の育成</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section systems-section" id="flow" aria-labelledby="flow-title">
+        <div class="section-inner">
+          <div class="section-heading compact">
+            <p class="section-kicker">Keep Going</p>
+            <h2 id="flow-title">続けられる仕組みが、AIを毎日の仕事道具にする。</h2>
+          </div>
+          <div class="audience-grid">
+            <article>
+              <span>Morning</span>
+              <h3>AI朝活</h3>
+              <p>ニュース、ゼロ秒思考、タイピング、小さなAIアウトプットを積み上げます。</p>
+            </article>
+            <article>
+              <span>Archive</span>
+              <h3>講座アーカイブ</h3>
+              <p>参加できない日も追いつけるように、学びをあとから見返せる状態にします。</p>
+            </article>
+            <article>
+              <span>Growth</span>
+              <h3>バッジ・成長ボード</h3>
+              <p>チェックイン、参加履歴、特典記事で、自分の前進が見える設計にします。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section steps-section" aria-labelledby="steps-title">
+        <div class="section-inner">
+          <div class="section-heading compact">
+            <p class="section-kicker">Start</p>
+            <h2 id="steps-title">はじめ方は、むずかしくありません。</h2>
+          </div>
+          <div class="steps-faq-grid">
+            <ol class="flow">
+              <li>
+                <span>1</span>
+                <h3>相談する</h3>
+                <p>MMS参加、法人研修、AI導入など目的を教えてください。</p>
+              </li>
+              <li>
+                <span>2</span>
+                <h3>学ぶ場を選ぶ</h3>
+                <p>セミナー、朝活、ハンズオン、法人研修から合う形を決めます。</p>
+              </li>
+              <li>
+                <span>3</span>
+                <h3>作って試す</h3>
+                <p>自分の仕事や発信に近いテーマで、小さく実践します。</p>
+              </li>
+              <li>
+                <span>4</span>
+                <h3>続けて広げる</h3>
+                <p>発表、案件化、社内展開など、次の挑戦へつなげます。</p>
+              </li>
+            </ol>
+            <div class="faq-list">
+              <article>
+                <h3>初心者でも参加できますか？</h3>
+                <p>はい。画面の操作から丁寧に進めるハンズオン形式を大切にしています。</p>
+              </article>
+              <article>
+                <h3>どのAIツールを使いますか？</h3>
+                <p>ChatGPT、Claude、Gemini、Dify、GAS、Canvaなど、目的に応じて選びます。</p>
+              </article>
+              <article>
+                <h3>法人研修はできますか？</h3>
+                <p>可能です。業務課題の整理から、研修、活用フロー設計まで相談できます。</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section leader-section" aria-labelledby="leader-title">
+        <div class="section-inner leader-grid">
+          <div>
+            <p class="section-kicker">Team</p>
+            <h2 id="leader-title">現場で使えるAIにこだわる運営チーム。</h2>
+          </div>
+          <p>
+            MIRAICHIは、村岡大地さんと今野純子さんを中心に運営されるAI活用・AI教育・AI実践の
+            プラットフォームです。現場改善、講師、コミュニティ運営、法人支援の視点を合わせ、
+            机上の空論ではないAI活用を届けます。
+          </p>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="section-inner contact-inner">
+          <div>
+            <p class="section-kicker">Contact</p>
+            <h2 id="contact-title">AIを学ぶだけで終わらせない一歩を。</h2>
+            <p>
+              MMSへの参加相談、法人研修、AI導入支援、セミナー依頼など、目的に合わせて相談できます。
+              まずは今の課題や挑戦したいことを教えてください。
+            </p>
+          </div>
+          <div class="hero-actions" aria-label="相談導線">
+            <a class="button primary light" href="https://miraichi.memberpay.jp/plan/item/li54pja" target="_blank" rel="noopener">MMS参加申込へ</a>
+            <a class="button secondary" href="https://peatix.com/group/16331864/events" target="_blank" rel="noopener">公開イベントを見る</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span data-year></span> MIRAICHI・MMS</p>
+      <nav class="footer-links" aria-label="フッターリンク">
+        <a href="events.html">イベント開催実績</a>
+        <a href="commercial-transactions.html">特定商取引法に基づく表記</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="#top">ページ上部へ</a>
+      </nav>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
