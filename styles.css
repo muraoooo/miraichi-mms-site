@@ -1641,6 +1641,47 @@ h3 {
   line-height: 1.9;
 }
 
+.legal-section {
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+}
+
+.legal-section h2 {
+  margin: 0 0 12px;
+  color: var(--green-950);
+  font-size: clamp(1.28rem, 2.4vw, 1.75rem);
+  line-height: 1.35;
+}
+
+.legal-section h3 {
+  margin: 20px 0 8px;
+  color: var(--green-700);
+  font-size: 1rem;
+}
+
+.legal-section p,
+.legal-section li {
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.9;
+}
+
+.legal-section p {
+  margin: 0 0 12px;
+}
+
+.legal-section ul {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 14px;
+  padding-left: 1.3em;
+}
+
+.legal-section a {
+  color: var(--green-700);
+  font-weight: 900;
+}
+
 .legal-list {
   display: grid;
   gap: 0;
