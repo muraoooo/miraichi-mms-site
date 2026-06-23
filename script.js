@@ -3,6 +3,44 @@ document.documentElement.classList.add("js");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const nav = document.querySelector("[data-nav]");
 const year = document.querySelector("[data-year]");
+const productionOrigin = "https://miraichi-mms-site.pages.dev";
+
+function getPublishedPageUrl() {
+  const rawPath = window.location.pathname.replace(/\/$/, "/index.html");
+  const path = rawPath === "/" ? "/index.html" : rawPath;
+  return `${productionOrigin}${path}${window.location.hash || ""}`;
+}
+
+function updateLanguageLinks() {
+  const switches = document.querySelectorAll("[data-language-switch]");
+  if (!switches.length) {
+    return;
+  }
+
+  const currentPath = `${window.location.pathname}${window.location.hash || ""}`;
+  const publishedUrl = encodeURIComponent(getPublishedPageUrl());
+  const targets = {
+    ja: currentPath || "/",
+    en: `https://translate.google.com/translate?sl=ja&tl=en&u=${publishedUrl}`,
+    zh: `https://translate.google.com/translate?sl=ja&tl=zh-CN&u=${publishedUrl}`,
+  };
+
+  switches.forEach((switcher) => {
+    switcher.querySelectorAll("[data-lang]").forEach((link) => {
+      const lang = link.dataset.lang;
+      if (!lang || !targets[lang]) {
+        return;
+      }
+      link.href = targets[lang];
+      if (lang === "ja") {
+        link.removeAttribute("target");
+        link.removeAttribute("rel");
+      }
+    });
+  });
+}
+
+updateLanguageLinks();
 
 if (year) {
   year.textContent = new Date().getFullYear();
