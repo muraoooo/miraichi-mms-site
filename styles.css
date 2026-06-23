@@ -164,10 +164,11 @@ a {
 
 .language-switch a {
   min-height: 30px;
-  padding: 5px 9px;
+  padding: 5px 8px;
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .language-switch a[aria-current="true"] {

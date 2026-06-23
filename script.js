@@ -22,7 +22,7 @@ function updateLanguageLinks() {
   const targets = {
     ja: currentPath || "/",
     en: `https://translate.google.com/translate?sl=ja&tl=en&u=${publishedUrl}`,
-    zh: `https://translate.google.com/translate?sl=ja&tl=zh-CN&u=${publishedUrl}`,
+    zh: `https://translate.google.com/translate?sl=ja&tl=zh-TW&u=${publishedUrl}`,
   };
 
   switches.forEach((switcher) => {
