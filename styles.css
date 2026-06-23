@@ -535,6 +535,17 @@ h3 {
     background 180ms ease;
 }
 
+.hero-links-panel a.link-featured,
+.mobile-hero-links a.link-featured {
+  border-color: rgba(244, 74, 142, 0.34);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(255, 235, 246, 0.9)),
+    linear-gradient(135deg, rgba(24, 184, 109, 0.1), rgba(244, 74, 142, 0.14));
+  box-shadow:
+    0 16px 38px rgba(244, 74, 142, 0.14),
+    0 12px 30px rgba(15, 123, 69, 0.1);
+}
+
 .hero-links-panel a {
   display: grid;
   gap: 1px;
