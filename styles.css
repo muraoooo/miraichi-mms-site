@@ -408,12 +408,16 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
   min-height: 48px;
+  min-width: 0;
   border: 2px solid transparent;
   border-radius: 8px;
   font-weight: 900;
   padding: 11px 20px;
+  text-align: center;
   text-decoration: none;
+  overflow-wrap: anywhere;
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
@@ -1223,6 +1227,10 @@ h3 {
   grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
   gap: clamp(24px, 5vw, 64px);
   align-items: center;
+}
+
+.source-grid > * {
+  min-width: 0;
 }
 
 .event-source-section h2,
@@ -2179,6 +2187,12 @@ h3 {
   .event-browser-controls {
     display: grid;
     width: 100%;
+  }
+
+  .source-actions,
+  .source-actions .button {
+    width: 100%;
+    min-width: 0;
   }
 
   .past-event-item {
