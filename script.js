@@ -42,6 +42,30 @@ function updateLanguageLinks() {
 
 updateLanguageLinks();
 
+function protectLinkedInLinks() {
+  document.querySelectorAll("[data-linkedin-profile]").forEach((link) => {
+    if (!(link instanceof HTMLAnchorElement)) {
+      return;
+    }
+
+    const profile = link.dataset.linkedinProfile;
+    if (!profile) {
+      return;
+    }
+
+    const directUrl = `https://www.linkedin.com/in/${profile}/`;
+    link.href = directUrl;
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.open(directUrl, "_blank", "noopener");
+    });
+  });
+}
+
+protectLinkedInLinks();
+
 if (year) {
   year.textContent = new Date().getFullYear();
 }
